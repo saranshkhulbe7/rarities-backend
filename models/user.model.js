@@ -29,7 +29,7 @@ const userSchema = new Schema(
         },
         role: {
             type: String,
-            enum: ["admin", "buyer","seller"],
+            enum: ["admin", "buyer", "seller"],
             default: "buyer",
             required: true,
         },
@@ -51,6 +51,10 @@ const userSchema = new Schema(
         token: {
             type: String,
             default: null
+        },
+        address: {
+            type: String,
+            default: null,
         },
         otp: {
             type: String,

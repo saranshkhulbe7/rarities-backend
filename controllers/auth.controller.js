@@ -10,9 +10,9 @@ const cryptr = new Cryptr(getEnvironment().CRYPTR_SECRET)
 module.exports.signup = async (req, res, next) => {
     try {
         const {
-            email, password, name
+            email, password, name, role, address, phone
         } = req.body;
-        if (!email || !password || !name) {
+        if (!email || !password || !name || !role || !address || !phone) {
             return res.status(400).send({
                 status: false,
                 error: true,
