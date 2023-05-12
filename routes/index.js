@@ -3,11 +3,13 @@ const auth = require('../middlewares/auth')
 
 
 // UNAUTHENTICATED ROUTES
-// router.use('/auth', require('./auth.route'))
+router.use('/auth', require('./auth.route'))
 
 
 // AUTHENTICATED ROUTES
 // router.use(auth)
-router.use('/city', require('./user.route'))
+router.use('/product', require('./product.route'))
+router.use('/category', require('./category.route'))
+
 
 module.exports = router
