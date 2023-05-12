@@ -19,7 +19,7 @@ const productSchema = new Schema(
             type: Schema.Types.ObjectId,
             ref: "user",
         },
-        category:{
+        category: {
             type: Schema.Types.ObjectId,
             ref: "category",
         },
@@ -31,7 +31,13 @@ const productSchema = new Schema(
         description: {
             type: String,
             required: true,
-        }
+        },
+        bids: [
+            {
+                type: Schema.Types.ObjectId,
+                ref: "bid",
+            },
+        ],
     },
     {
         versionKey: false,
